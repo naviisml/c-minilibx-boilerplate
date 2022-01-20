@@ -4,7 +4,7 @@ AR = @ar
 AR_FLAGS = -rcs
 
 COMPILER = @gcc
-COMPILER_FLAGS = -Wall -Werror -Wextra -Imlx
+COMPILER_FLAGS = -Wall -Werror -Wextra -Imlx -Iincludes/
 COMPILER_LIBRARIES = -framework OpenGL -framework AppKit
 
 # Configuration...
@@ -26,11 +26,8 @@ BUILD_FILES		=	$(addprefix $(BUILD_FOLDER)/, $(LIBFT)) \
 
 # Source Files...
 SOURCE_FOLDER	=	./srcs
-SOURCE_FILES	=	utilities/colors.c \
-					utilities/window.c \
-					utilities/events.c \
-					events/_events.c \
-					example.c
+SOURCE_FILES	=	utilities/x11_window.c \
+					ft_example.c
 
 # Object Files...
 EXTRA_FOLDERS	=	$(SOURCE_FOLDER)
