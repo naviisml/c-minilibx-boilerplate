@@ -4,8 +4,8 @@ AR = @ar
 AR_FLAGS = -rcs
 
 COMPILER = @gcc
-COMPILER_FLAGS = -Wall -Werror -Wextra -Imlx
-COMPILER_LIBRARIES = -framework OpenGL -framework AppKit
+COMPILER_FLAGS = -Wall -Werror -Wextra -I/usr/include -Imlx_linux -O3
+COMPILER_LIBRARIES = -L$(MINILIBX_FOLDER) -L/usr/lib -I$(MINILIBX_FOLDER) -lXext -lX11 -lm -lz
 
 # Configuration...
 
@@ -14,15 +14,15 @@ LIBFT			=	libft.a
 LIBFT_FOLDER	=	./libraries/libft
 
 # Minilibx
-MINILIBX		=	libmlx.dylib
-MINILIBX_FOLDER	=	./libraries/minilibx_macos
+MINILIBX		=	libmlx.a
+MINILIBX_FOLDER	=	./libraries/minilibx_linux
 
 # libmlx.a libmlx.dylib
 
 # Build Folder
 BUILD_FOLDER	=	./build
 BUILD_FILES		=	$(addprefix $(BUILD_FOLDER)/, $(LIBFT)) \
-					$(MINILIBX)
+					$(addprefix $(BUILD_FOLDER)/, $(MINILIBX))
 
 # Source Files...
 SOURCE_FOLDER	=	./srcs
@@ -61,9 +61,9 @@ $(LIBFT):
 $(MINILIBX):
 	@echo "Compiling \t$(MINILIBX)..."
 	@$(MAKE) -C $(MINILIBX_FOLDER)
-	@$(MAKE) all -C $(MINILIBX_FOLDER)
+	@$(MAKE) all -C $(MINILIBX_FOLDER) -f Makefile.gen
 	@mkdir -p $(BUILD_FOLDER)
-	@mv $(addprefix $(MINILIBX_FOLDER)/, $(MINILIBX)) $(MINILIBX)
+	@mv $(addprefix $(MINILIBX_FOLDER)/, $(MINILIBX)) $(addprefix $(BUILD_FOLDER)/, $(MINILIBX))
 
 all: $(NAME)
 
@@ -75,7 +75,7 @@ clean:
 # Remove the `object` and `build` folder and files...
 fclean: clean
 	@$(MAKE) fclean -C $(LIBFT_FOLDER)
-	@rm -rf $(NAME) $(BUILD_FOLDER) $(MINILIBX)
+	@rm -rf $(NAME) $(BUILD_FOLDER)
 
 # Clean the program up and re-compile it...
 re: fclean all
