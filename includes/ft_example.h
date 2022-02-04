@@ -16,5 +16,11 @@
 # include "libft.h"
 
 void	test(void);
+int		rgba(int r, int g, int b, int a);
+int		get_alpha(int rgba);
+int		get_red(int rgba);
+int		get_green(int rgba);
+int		get_blue(int rgba);
+
 
 #endif
