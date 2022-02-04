@@ -2,6 +2,12 @@
 
 This is a C Boilerplate for my future C projects on Codam using Minilibx. This boilerplate allows me to start projects swiftly with a pre-made template.
 
+## Features
+
+- ~~Texture Utilities~~
+- Color Utilities
+- Events *Bind a event to a specific key*
+
 ## Requirements
 
 - gcc
