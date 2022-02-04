@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_example.h                                       :+:    :+:            */
+/*   server.c                                           :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: nismail <nismail@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/11/23 00:27:03 by nismail       #+#    #+#                 */
-/*   Updated: 2022/01/20 12:34:30 by nismail       ########   odam.nl         */
+/*   Created: 2021/11/23 00:26:25 by nismail       #+#    #+#                 */
+/*   Updated: 2022/02/04 16:04:09 by nismail       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_EXAMPLE_H
-# define FT_EXAMPLE_H
+#include <ft_example.h>
 
-# include "libft.h"
-
-typedef struct s_server t_server;
-int		rgba(int r, int g, int b, int a);
-int		get_alpha(int rgba);
-int		get_red(int rgba);
-int		get_green(int rgba);
-int		get_blue(int rgba);
-
-
-typedef struct s_server {
-	void		*mlx;
-	void		*window;
-	int			width;
-	int			height;
-}				t_server;
-
-#endif
+/**
+ * The server_initialize() function ..
+ */
+void	server_initialize(t_server *server)
+{
+	server->mlx = NULL;
+	server->window = NULL;
+	server->width = 0;
+	server->height = 0;
+}

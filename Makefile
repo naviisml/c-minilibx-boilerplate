@@ -27,6 +27,7 @@ BUILD_FILES		=	$(addprefix $(BUILD_FOLDER)/, $(LIBFT)) \
 # Source Files...
 SOURCE_FOLDER	=	./srcs
 SOURCE_FILES	=	utilities/color.c \
+					properties/server.c \
 					ft_example.c
 
 # Object Files...
