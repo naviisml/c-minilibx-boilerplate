@@ -14,6 +14,8 @@
 
 int	main(void)
 {
-	server_initialize();
+	t_server	example;
+
+	server_initialize(&example);
 	return (0);
 }
