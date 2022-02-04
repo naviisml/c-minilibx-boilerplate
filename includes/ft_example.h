@@ -16,6 +16,10 @@
 # include "libft.h"
 
 typedef struct s_server t_server;
+void	game_start(t_server *so_long);
+int		game_error(t_server *so_long, char *error);
+int		game_destroy(int keycode, t_server *so_long);
+
 int		rgba(int r, int g, int b, int a);
 int		get_alpha(int rgba);
 int		get_red(int rgba);
