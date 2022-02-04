@@ -12,10 +12,23 @@
 
 #include <ft_example.h>
 
+/**
+ * The render() function ...
+ */
+static int	render(t_server *so_long)
+{
+	return (0);
+}
+
+/**
+ * example ...
+ */
 int	main(void)
 {
 	t_server	example;
 
 	server_initialize(&example);
+	mlx_loop_hook(example.mlx, render, &example);
+	mlx_loop(example.mlx);
 	return (0);
 }
