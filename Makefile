@@ -29,6 +29,7 @@ SOURCE_FOLDER	=	./srcs
 SOURCE_FILES	=	utilities/color.c \
 					utilities/draw.c \
 					properties/server.c \
+					events/events.c \
 					modules/game.c \
 					ft_example.c
 
