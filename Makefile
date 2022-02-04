@@ -26,8 +26,8 @@ BUILD_FILES		=	$(addprefix $(BUILD_FOLDER)/, $(LIBFT)) \
 
 # Source Files...
 SOURCE_FOLDER	=	./srcs
-SOURCE_FILES	=	utilities/color.c \
-					utilities/draw.c \
+SOURCE_FILES	=	utilities/colors.c \
+					utilities/textures.c \
 					properties/server.c \
 					events/events.c \
 					modules/game.c \

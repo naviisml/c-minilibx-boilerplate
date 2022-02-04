@@ -6,14 +6,15 @@
 /*   By: nismail <nismail@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/23 00:27:03 by nismail       #+#    #+#                 */
-/*   Updated: 2022/02/04 16:07:15 by nismail       ########   odam.nl         */
+/*   Updated: 2022/02/04 16:42:51 by nismail       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_EXAMPLE_H
 # define FT_EXAMPLE_H
 
-# include "libft.h"
+# include <libft.h>
+# include <mlx.h>
 
 typedef struct s_server t_server;
 typedef struct s_events t_events;
