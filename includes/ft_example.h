@@ -33,6 +33,11 @@ int				get_alpha(int rgba);
 int				get_red(int rgba);
 int				get_green(int rgba);
 int				get_blue(int rgba);
+t_sprite		sprite_create(t_server *server, char *path);
+void			sprite_put(t_server *server, t_sprite *image, int x, int y);
+void			sprite_paint(t_server *server, t_sprite *image, int x, int y);
+void			sprite_destroy(t_server *server, t_sprite *image);
+void			sprite_pixel_put(t_sprite *image, int color, int x, int y);
 unsigned int	pixel_get(t_sprite *texture, int x, int y);
 void			pixel_draw(t_sprite *image, int color, int x, int y);
 
