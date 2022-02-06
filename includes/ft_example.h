@@ -33,6 +33,8 @@ int				get_alpha(int rgba);
 int				get_red(int rgba);
 int				get_green(int rgba);
 int				get_blue(int rgba);
+unsigned int	pixel_get(t_sprite *texture, int x, int y);
+void			pixel_draw(t_sprite *image, int color, int x, int y);
 
 typedef struct s_server {
 	void		*mlx;
