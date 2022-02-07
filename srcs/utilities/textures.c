@@ -39,10 +39,10 @@ void	sprite_paint(t_server *server, t_sprite *image, int x, int y)
 	int				j;
 
 	j = 0;
-	while (j < 32)
+	while (j < image->width)
 	{
 		i = 0;
-		while (i < 32)
+		while (i < image->height)
 		{
 			color = ft_mlx_pixel_get(image, i, j);
 			if (color != rgba(0, 0, 0, 255))
